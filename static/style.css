@@ -1,0 +1,246 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f5f7;
+    color: #222;
+}
+
+header {
+    background: #2f3b4c;
+}
+
+nav {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+nav .nav-links a {
+    color: #dce1e8;
+    text-decoration: none;
+    margin-left: 18px;
+    font-size: 0.95rem;
+}
+
+nav .nav-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #dcdfe4;
+    border-radius: 6px;
+    padding: 24px;
+    margin-bottom: 20px;
+}
+
+.auth-card {
+    max-width: 380px;
+    margin: 60px auto;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #c7cbd1;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+button, .btn {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 9px 18px;
+    background: #2f6feb;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+button:hover, .btn:hover {
+    background: #245ac2;
+}
+
+.btn-danger {
+    background: #c0392b;
+}
+
+.btn-danger:hover {
+    background: #992d22;
+}
+
+.auth-switch {
+    margin-top: 14px;
+    font-size: 0.9rem;
+}
+
+.flash-messages {
+    margin-bottom: 16px;
+}
+
+.flash {
+    display: none;
+    padding: 10px 14px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+}
+
+.flash-error {
+    background: #fdecea;
+    color: #c0392b;
+    border: 1px solid #f3b4ac;
+}
+
+.flash-success {
+    background: #eafaf1;
+    color: #1e8449;
+    border: 1px solid #a9dfbf;
+}
+
+/* sentiment result / badges */
+.result-box {
+    margin-top: 20px;
+    padding: 18px;
+    border-radius: 6px;
+    border: 1px solid #dcdfe4;
+}
+
+.sentiment-label {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.sentiment-positive {
+    background: #eafaf1;
+    color: #1e8449;
+}
+
+.sentiment-negative {
+    background: #fdecea;
+    color: #c0392b;
+}
+
+.sentiment-neutral {
+    background: #fdf6e3;
+    color: #9a7d0a;
+}
+
+.confidence-bar-track {
+    background: #e6e8eb;
+    border-radius: 6px;
+    height: 10px;
+    margin-top: 8px;
+    overflow: hidden;
+}
+
+.confidence-bar-fill {
+    background: #2f6feb;
+    height: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 10px 8px;
+    border-bottom: 1px solid #e6e8eb;
+    font-size: 0.9rem;
+}
+
+th {
+    color: #555;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.stats-grid {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    flex: 1;
+    min-width: 140px;
+    background: #fff;
+    border: 1px solid #dcdfe4;
+    border-radius: 6px;
+    padding: 16px;
+    text-align: center;
+}
+
+.stat-card .value {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.stat-card .label {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 4px;
+}
+
+.char-counter {
+    font-size: 0.8rem;
+    color: #888;
+    text-align: right;
+    margin-top: 4px;
+}
+
+.empty-state {
+    color: #777;
+    font-style: italic;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyze - Sentiment Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header id="navbar"></header>
+
+    <main>
+        <div id="flash" class="flash"></div>
+
+        <div class="card">
+            <h1>Analyze Text</h1>
+            <p>Enter some text below and it'll be scored against the word bank (happy / sad words, with negation and intensifier handling).</p>
+
+            <form id="analyze-form">
+                <label for="input_text">Text</label>
+                <textarea id="input_text" name="input_text" maxlength="1000" required></textarea>
+                <div class="char-counter"><span id="char-count">0</span> / 1000</div>
+
+                <button type="submit" id="analyze-btn">Analyze</button>
+            </form>
+        </div>
+
+        <div class="card result-box" id="result-box" style="display: none;">
+            <h1>Result</h1>
+
+            <span class="sentiment-label" id="sentiment-label"></span>
+
+            <p>Confidence: <span id="confidence-pct"></span>%</p>
+            <div class="confidence-bar-track">
+                <div class="confidence-bar-fill" id="confidence-bar-fill" style="width: 0%;"></div>
+            </div>
+
+            <p style="margin-top:16px;"><strong>Matched words:</strong></p>
+            <table id="matched-words-table">
+                <thead>
+                    <tr><th>Word</th><th>Category</th><th>Contribution</th></tr>
+                </thead>
+                <tbody id="matched-words-body"></tbody>
+            </table>
+            <p class="empty-state" id="no-matches-msg" style="display: none;">No words from the word bank were found in this text.</p>
+
+            <a class="btn" href="/history">View History</a>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='common.js') }}"></script>
+    <script src="{{ url_for('static', filename='analyze.js') }}"></script>
+</body>
+</html>
