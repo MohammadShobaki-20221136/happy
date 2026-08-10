@@ -20,7 +20,7 @@ from app.main import (
 app = Flask(__name__)
 # NOTE: replace with a real secret (e.g. loaded from an environment variable)
 # before deploying anywhere outside of local development.
-SECRET_KEY = "your_super_secret_key_here"
+SECRET_KEY = "Mohammad_Shobaki"
 ALGORITHM = "HS256"
 
 
